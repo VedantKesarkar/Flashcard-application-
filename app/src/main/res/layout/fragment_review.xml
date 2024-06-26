@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".queue.ReviewFragment">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/flipCardView"
+        android:layout_width="320dp"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:cardCornerRadius="40dp"
+        app:cardElevation="10dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#E693E4">
+
+
+            <TextView
+                android:id="@+id/txt_question"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="Front of the card . Question"
+                android:textColor="@color/black"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0">
+
+            </TextView>
+
+
+            <ImageButton
+                android:id="@+id/img_btn_flipCard"
+                android:layout_width="41dp"
+                android:layout_height="32dp"
+                android:background="@drawable/baseline_flip_24"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txt_question"
+                app:layout_constraintVertical_bias=".7" />
+
+
+            <Button
+                android:id="@+id/btn_again"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="again"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginLeft="40dp"
+                app:layout_constraintVertical_bias="1"
+                android:layout_marginBottom="70dp"/>
+
+            <Button
+                android:id="@+id/btn_hard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="hard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintHorizontal_bias="1"
+                android:layout_marginRight="40dp"
+                app:layout_constraintVertical_bias="1"
+                android:layout_marginBottom="70dp"/>
+
+            <Button
+                android:id="@+id/btn_good"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="good"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btn_again"
+                app:layout_constraintStart_toStartOf="@+id/btn_again"
+                app:layout_constraintTop_toBottomOf="@+id/btn_again"
+                app:layout_constraintVertical_bias="1"
+                android:layout_marginBottom="20dp"/>
+
+            <Button
+                android:id="@+id/btn_easy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="easy"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/btn_hard"
+                app:layout_constraintStart_toStartOf="@+id/btn_hard"
+                app:layout_constraintTop_toBottomOf="@+id/btn_hard"
+                app:layout_constraintVertical_bias="1"
+                android:layout_marginBottom="20dp"/>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

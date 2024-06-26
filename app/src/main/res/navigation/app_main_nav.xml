@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_main_nav"
+    app:startDestination="@id/queueFragment">
+
+    <fragment
+        android:id="@+id/queueFragment"
+        android:name="com.project.flashcardapp.queue.QueueFragment"
+        android:label="fragment_queue"
+        tools:layout="@layout/fragment_queue" >
+        <action
+            android:id="@+id/action_queueFragment_to_reviewFragment"
+            app:destination="@id/reviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.project.flashcardapp.home.presentation.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_flashCardFragment"
+            app:destination="@id/flashCardFragment" />
+
+    </fragment>
+    <fragment
+        android:id="@+id/flashCardFragment"
+        android:name="com.project.flashcardapp.home.presentation.FlashCardFragment"
+        android:label="FlashCardFragment"
+        tools:layout="@layout/fragment_flash_card"
+        >
+        <argument
+            android:name="DECK_ID"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_flashCardFragment_to_createFlashCardFragment"
+            app:destination="@id/createFlashCardFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/createFlashCardFragment"
+        android:name="com.project.flashcardapp.home.presentation.CreateFlashCardFragment"
+        android:label="fragment_create_flash_card"
+        tools:layout="@layout/fragment_create_flash_card" >
+        <action
+            android:id="@+id/action_createFlashCardFragment_to_flashCardFragment"
+            app:destination="@id/flashCardFragment" />
+        <argument
+            android:name="DECK_ID"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/reviewFragment"
+        android:name="com.project.flashcardapp.queue.ReviewFragment"
+        android:label="fragment_review"
+        tools:layout="@layout/fragment_review" >
+        <argument
+            android:name="QUES"
+            app:argType="string" />
+        <argument
+            android:name="ANS"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_reviewFragment_to_queueFragment"
+            app:destination="@id/queueFragment" />
+        <argument
+            android:name="ID"
+            app:argType="string" />
+    </fragment>
+</navigation>
